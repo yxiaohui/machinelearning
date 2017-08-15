@@ -1,7 +1,6 @@
 import gradientDescent
 import unittest
 import numpy as np
-from math import fabs
 
 class test_gradient_descent(unittest.TestCase):
 
@@ -15,9 +14,8 @@ class test_gradient_descent(unittest.TestCase):
         iterations = 1500
         alpha = 0.01
         theta, J_h = gradientDescent.gradient_descent(self.X, self.y, theta, alpha, iterations)
-        print('Theta =')
-
-        a = np.zeros([2,1])
+        print('Theta found by gradent descent:++++++')
+        print(theta[0], theta[1])
         self.assertTrue(np.allclose(theta, np.array([[-3.56218887], [1.15952071]])))
 
 if __name__ == '__main__':
